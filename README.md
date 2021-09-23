@@ -10,14 +10,14 @@
 ------------------
 
 ## Time Estimate: Allow Users To Vote For Their Favorit Beast 09/22/2021
-Number and name of feature: ________________________________
+Number and name of feature: ____Allow Users to Vote for their favorite beast____________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __all night___
 
-Start time: _____
+Start time: __6pm___
 
-Finish time: _____
+Finish time: __midnight___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __all night lol___
 
 -----------
