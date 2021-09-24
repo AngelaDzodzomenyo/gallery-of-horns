@@ -1,6 +1,6 @@
 import React from 'react';
-// import Button from 'react-bootstrap/Button'
-// import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
 
 
 class HornedBeasts extends React.Component {
@@ -22,20 +22,24 @@ class HornedBeasts extends React.Component {
 
   render(){
     return(
-      <>
-        <h2 className="title">{this.props.title}</h2>
-        <img src={this.props.image_url} alt="A Horned Beast"/>
-        <p className="description">{this.props.description}</p>
-        <p className="horns">{this.props.horns}</p>
+      <div className="m-1" id="container"> 
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={this.props.image_url} alt="A Horned Beast" />
+        <Card.Body>
+         <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>
+              {this.props.description}
+          </Card.Text>
+          <Button onClick={this.onLike}>Like</Button>
+        </Card.Body>
+      </Card>
+        {/* <h2 className="title">{this.props.title}</h2>
+        <p className="description">{this.props.description}</p> */}
         <p>Amount of Times Favorited: {this.state.clickOnBeast} {(this.state.isFav) ? '❤️' : ''}</p>
-        <button onClick={this.onLike}>Like</button>
-      </>
+      </div>
     );
   }
 
 }
 
 export default HornedBeasts;
-
-
-
