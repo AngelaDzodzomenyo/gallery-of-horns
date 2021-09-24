@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+img{
+  border-radius: 16px;
+  border: solid coral 4px;
+}
+ 
+#container{
+  display: inline-block;
+  padding: 20px;
+  border: coral solid 5px;
+  background-color: cornflowerblue;
+  border-radius: 16px;
+}
+
