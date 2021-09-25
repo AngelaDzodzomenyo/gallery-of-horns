@@ -25,7 +25,7 @@ class HornedBeasts extends React.Component {
       <div className="m-1" id="container"> 
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={this.props.image_url} alt="A Horned Beast" />
-        <Card.Body>
+        <Card.Body className="bootstrapCard">
          <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
               {this.props.description}
