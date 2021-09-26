@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Number and name of feature: ____gallery-of-horns04____________________________
 
 Estimate of time needed to complete: _4hrs____
@@ -13,9 +12,7 @@ Actual time needed to complete: _____
 
 
 <!-- # Getting Started with Create React App
-=======
 # README
->>>>>>> 67ff9ad78b0bd9d90188f4b5219d8a7098e3fb15
 
 ## About: This is an app that will display images using React. Users will be able to see the images and interact by voting on which ones are their favorite. 
   * Tools & Languages: HTML, CSS, JavaScript, React, Bootstrap
@@ -37,7 +34,6 @@ Finish time: __midnight___
 
 Actual time needed to complete: __all night lol___
 
-<<<<<<< HEAD
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -85,6 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
-=======
 -----------
->>>>>>> 67ff9ad78b0bd9d90188f4b5219d8a7098e3fb15
