@@ -17,6 +17,7 @@ class HornedBeasts extends React.Component {
   onLike =() => {
     console.log('add button pressed');
     this.setState({ clickOnBeast: this.state.clickOnBeast + 1, isFav: true});
+    this.props.toggleModal(this.props.title);
   }
   
 

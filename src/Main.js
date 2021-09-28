@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import data from './data.json'
+// import data from './data.json'
 
 class Main extends React.Component {
   constructor(props){
@@ -11,11 +11,13 @@ class Main extends React.Component {
   render(){
     let hornedarr = [];
 
-    data.forEach((horned,idx) => {
+    this.props.data.forEach((horned,idx) => {
       hornedarr.push(
-        <HornedBeasts key={idx} title={horned.title} image_url={horned.image_url} description={horned.description} />
+        <HornedBeasts key={idx} title={horned.title} image_url={horned.image_url} description={horned.description} toggleModal={this.props.toggleModal} />
       );
     })
+
+
 
     return (
       <>
