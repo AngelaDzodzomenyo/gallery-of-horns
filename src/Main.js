@@ -1,13 +1,43 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
 // import data from './data.json'
+import HornForm from './HornForm.js';
+import Container from 'react-bootstrap/Container';
+
+
+let allNumbers = [0,1,2,3,9000];
 
 class Main extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      numbers: allNumbers,
     }
   }
+
+  handleSelect = (selectHorns) => {
+    let updatedNumbers;
+
+    if(selectHorns === "one") {
+      updatedNumbers = allNumbers.filter(number => number % 2 === 1);
+    } else if (selectHorns === "two") {
+      updatedNumbers = allNumbers.filter(number => number % 2 === 0);
+    } else {
+      updatedNumbers = allNumbers;
+    }
+    this.setState({
+      numbers: updatedNumbers,
+    });
+  }
+  
+
+
+
+
+
+
+
+
   render(){
     let hornedarr = [];
 
@@ -20,14 +50,20 @@ class Main extends React.Component {
 
 
     return (
-      <>
+      <Container>
+      <HornForm onSelect={this.handleSelect}/>
       <h2>Horned Beasts and Where To Find Them</h2>
       {hornedarr}
-      </>
+      </Container>
     );
   }
 
 }
+
+
+
+
+
 
 export default Main;
 
