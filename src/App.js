@@ -6,7 +6,7 @@ import Footer from './Footer.js';
 import dataJson from './data.json';
 import SelectedBeast from './selectedBeast.js';
 import './App.css';
-import HornedBeasts from './HornedBeasts.js';
+// import HornedBeasts from './HornedBeasts.js';
 
 
 
