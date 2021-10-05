@@ -15,20 +15,7 @@ class Main extends React.Component {
     }
   }
 
-  handleSelect = (selectHorns) => {
-    let updatedNumbers;
-
-    if(selectHorns === "one") {
-      updatedNumbers = allNumbers.filter(number => number % 2 === 1);
-    } else if (selectHorns === "two") {
-      updatedNumbers = allNumbers.filter(number => number % 2 === 0);
-    } else {
-      updatedNumbers = allNumbers;
-    }
-    this.setState({
-      numbers: updatedNumbers,
-    });
-  }
+  
   
 
 
@@ -41,7 +28,7 @@ class Main extends React.Component {
   render(){
     let hornedarr = [];
 
-    this.props.data.forEach((horned,idx) => {
+    this.props.filteredData.forEach((horned,idx) => {
       hornedarr.push(
         <HornedBeasts key={idx} title={horned.title} image_url={horned.image_url} description={horned.description} toggleModal={this.props.toggleModal} />
       );
@@ -51,7 +38,7 @@ class Main extends React.Component {
 
     return (
       <Container>
-      <HornForm onSelect={this.handleSelect}/>
+      <HornForm onSelect={this.props.handleSelect}/>
       <h2>Horned Beasts and Where To Find Them</h2>
       {hornedarr}
       </Container>
