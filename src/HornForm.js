@@ -12,13 +12,13 @@ class HornForm extends React.Component {
 
   render() {
     return (
-      <Container >
-        <Navbar bd = 'dark' variant = 'dark'>
-          <Navbar.Brand>How Many Horns</Navbar.Brand>
+      <Container>
+        <Navbar bg = 'purple' variant = 'purple'>
+        <Navbar.Brand>How Many Horns?</Navbar.Brand>
         </Navbar>
         <Form>
         <Form.Select onChange={this.handleChange}>
-          <option>Select</option>
+          <option value="all">All</option>
           <option value="one">One</option>
           <option value="two">Two</option>
           <option value="three">Three</option>
@@ -30,4 +30,4 @@ class HornForm extends React.Component {
   }
 }
 
-export default Form;
+export default HornForm;
