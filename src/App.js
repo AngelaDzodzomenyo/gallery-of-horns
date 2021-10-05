@@ -43,6 +43,7 @@ class App extends React.Component {
           <Main 
             toggleModal={this.toggleModal}
             data={this.state.data}
+            
           /> 
           <SelectedBeast 
             selectedBeast={this.state.selectedBeast}
