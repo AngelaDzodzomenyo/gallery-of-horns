@@ -6,6 +6,7 @@ import Footer from './Footer.js';
 import dataJson from './data.json';
 import SelectedBeast from './selectedBeast.js';
 import './App.css';
+import HornedBeasts from './HornedBeasts.js';
 
 
 
@@ -15,7 +16,8 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       data: dataJson,
-      selectedBeast: {}
+      selectedBeast: {},
+      filteredData: dataJson
     }
   }
 
@@ -35,6 +37,22 @@ class App extends React.Component {
     })
   }
 
+  handleSelect = (event) => {
+    let updatedNumbers = this.state.data.filter(beast => {
+      if(event.target.value === "all") {
+        return beast; 
+      } else if (event.target.value === '9000'){
+        return beast.horns === 100;
+      } else {
+        return beast.horns === parseInt(event.target.value)
+      }
+    });
+
+    this.setState({
+      filteredData: updatedNumbers,
+    });
+  }
+
   render() {
     return (
       <>
@@ -43,7 +61,8 @@ class App extends React.Component {
           <Main 
             toggleModal={this.toggleModal}
             data={this.state.data}
-            
+            filteredData={this.state.filteredData}
+            handleSelect={this.handleSelect}
           /> 
           <SelectedBeast 
             selectedBeast={this.state.selectedBeast}
